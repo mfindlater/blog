@@ -1,0 +1,14 @@
+{{define "content"}}
+<div class="pure-menu pure-menu-open pure-menu-horizontal">
+    <ul>
+        <li><a href="/new">New Post</a></li>
+    </ul>
+</div>
+{{range .posts}}
+<article>
+	<h4>{{.Title}}</h4>
+	<h6>Posted {{.Posted}}</h6>
+	<p>{{printf "%s" .Body}}</p>
+</article>	
+{{end}}
+{{end}}
